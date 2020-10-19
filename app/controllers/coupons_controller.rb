@@ -5,6 +5,17 @@ class CouponsController < ActiveRecord::Base
     @coupon.store = params[:store]
     @coupon.save
     redierct_to coupon_path(@coupon)
+ end
+ 
+ def index 
+   @coupon = Coupon.all
+ end
 
+ def show
+   @coupon = Coupon.find(params[:id])
+ end
 
+ 
+
+ 
 end
