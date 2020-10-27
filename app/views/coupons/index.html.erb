@@ -1,0 +1,9 @@
+<!Doctype HTML>
+<html>
+  <body>
+    <% @coupons.each do |coupon| %>
+    <%= coupon.store %>
+      <%= link_to coupon.coupon_code, coupon_path(coupon) %>
+    <% end %>
+  </body>
+</html>
